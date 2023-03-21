@@ -1,8 +1,14 @@
 import { View, Text, Pressable,StyleSheet } from "react-native";
+import Colors from "../util/colors";
 
-function PrimaryButton({ children }) {
+function PrimaryButton({ children , onPress}) {
+
+    // function pressHandler(){
+    //     onPress();
+    // }
+
     return (
-        <Pressable >
+        <Pressable onPress={onPress} >
             <View style={style.buttonContainer}>
                 <Text style={style.buttonText}>{children}</Text>
             </View>
